@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68,<76", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hcc2d-encoder"
+version = "0.9.0"
+description = "Pure Python reference encoder for QR, HCC2D4, and HCC2D8 symbols"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Marco Querini"},
+]
+keywords = ["hcc2d", "qr-code", "barcode", "encoder", "color-barcode"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Multimedia :: Graphics",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.scripts]
+hcc2d-encoder = "hcc2d_encoder.encoder:main"
+
+[project.urls]
+Homepage = "https://hcc2d.com/en/"
+Documentation = "https://hcc2d.com/en/api"
+Specification = "https://doi.org/10.5281/zenodo.22206528"
+Source = "https://github.com/marco-querini/hcc2d-cli-python-encoder"
+Issues = "https://github.com/marco-querini/hcc2d-cli-python-encoder/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+hcc2d_encoder = ["py.typed"]
+

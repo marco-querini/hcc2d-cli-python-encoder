@@ -1,0 +1,6 @@
+include CHANGELOG.md
+include LICENSE
+include PUBLISHING.md
+include README.md
+include pyproject.toml
+recursive-include tests *.py
